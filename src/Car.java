@@ -44,4 +44,14 @@ public class Car extends Vehicle
       discountApplied = true;
     }
   }
+
+  @Override
+  public double calculateTollPrice()
+  {
+    if (getPassengers() >= 4)
+    {
+      return getTollFee() * 4;
+    }
+    return super.calculateTollPrice();
+  }
 }

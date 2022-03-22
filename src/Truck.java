@@ -32,4 +32,14 @@ public class Truck extends Vehicle
     }
     return true;
   }
+
+  @Override
+  public double calculateTollPrice()
+  {
+    if (hasTrailer)
+    {
+      return 2 * getTollFee() * axles;
+    }
+    return getTollFee() * axles;
+  }
 }
